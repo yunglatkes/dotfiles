@@ -107,6 +107,7 @@ alias lazydocker='docker run --rm -it -v /var/run/docker.sock:/var/run/docker.so
 
 alias pyenv="source ~/Code/venv/bin/activate"
 
+# Dotfiles "git" replacement
 alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
 # enable programmable completion features (you don't need to enable

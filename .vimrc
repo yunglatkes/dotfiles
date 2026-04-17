@@ -66,6 +66,7 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab indentkeys-=0# indentke
 "   Ps = 6  -> steady bar (xterm).
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
+autocmd VimLeave * silent !echo -ne "\e[6 q"
 
 " Colorscheme
 "
