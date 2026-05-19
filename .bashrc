@@ -102,8 +102,10 @@ alias bconf="vi ~/.bashrc"
 alias bup="source ~/.bashrc"
 alias vconf="vi ~/.vimrc"
 alias vup="source ~/.vimrc"
+
 alias homeconf="vi ~/Docker/homepage/config/services.yaml"
-alias lazydocker='docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock -v /yourpath/config:/.config/jesseduffield/lazydocker lazyteam/lazydocker'
+
+alias lazydocker='docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock -v ~/Docker/lazydocker/config:/.config/jesseduffield/lazydocker lazyteam/lazydocker'
 
 alias pyenv="source ~/Code/venv/bin/activate"
 
