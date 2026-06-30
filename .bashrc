@@ -96,24 +96,38 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# apt (Debian) alias
 alias update="sudo apt update && sudo apt upgrade -y"
 
+# pacman (Arch) alias
+alias pet="sudo pacman -S"
+alias pup="sudo pacman -Syu"
+alias nconf="vi ~/.config/niri/config.kdl"
+
+# bash alias
 alias bconf="vi ~/.bashrc"
 alias bup="source ~/.bashrc"
+
+# vim alias
 alias vconf="vi ~/.vimrc"
 alias vup="source ~/.vimrc"
+
+# tmux alias
 alias tconf="vi ~/.tmux.conf"
 alias tup="tmux source-file ~/.tmux.conf"
 
-alias homeconf="vi ~/Docker/homepage/config/services.yaml"
+# w3m alias
+alias ddg="w3m duckduckgo.com"
 
+# server alias
+alias hconf="vi ~/Docker/homepage/config/services.yaml"
 alias dockup="~/Code/dockcheck.sh"
-
 alias lazydocker='docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock -v ~/Docker/lazydocker/config:/.config/jesseduffield/lazydocker lazyteam/lazydocker'
 
+# python alias
 alias pyenv="source ~/Code/venv/bin/activate"
 
-# Dotfiles "git" replacement
+# dotfiles "git" replacement
 alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
 # enable programmable completion features (you don't need to enable
@@ -177,3 +191,6 @@ _docker_complete() {
   mapfile -t COMPREPLY < <(cd "$base" 2>/dev/null && compgen -d -- "$cur")
 }
 complete -F _docker_complete dcu dcd dcl
+
+# Custom path
+export PATH=$PATH:/home/$USER/.local/bin
